@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  is_done: false
+  due_on: 2018-10-06
+
+two:
+  title: MyString
+  is_done: false
+  due_on: 2018-10-06

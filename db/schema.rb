@@ -12,14 +12,14 @@
 
 ActiveRecord::Schema.define(version: 20181006083908) do
 
-  create_table "tasks", force: :cascade do |t|
+  create_table "tasks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.boolean  "is_done"
     t.date     "due_on"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["due_on"], name: "index_tasks_on_due_on"
-    t.index ["is_done"], name: "index_tasks_on_is_done"
+    t.index ["due_on"], name: "index_tasks_on_due_on", using: :btree
+    t.index ["is_done"], name: "index_tasks_on_is_done", using: :btree
   end
 
 end
